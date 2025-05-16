@@ -1,13 +1,21 @@
 
 // type alias
-type UserName = string | number;
-let firstName: UserName = "suraj";
+// type UserName = string | number;
+// let firstName: UserName = "suraj";
 
-type values = (n: number, m: number) => number
+// type values = (n: number, m: number) => number
 
-const fun:values = (n, m) =>{
-    console.log(n, m);
-    return n*m;
+// const fun:values = (n, m) =>{
+//     console.log(n, m);
+//     return n*m;
+// }
+
+// console.log(fun(12,12))
+
+// type values = (n: number, m: number) => number;
+
+const fun = (n: number, m: number) => {
+    return n * m;
 }
 
 console.log(fun(12,12))
