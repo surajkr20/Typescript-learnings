@@ -1,22 +1,17 @@
-// console.log("hello")
 
-// const a = "shall we go";
-// console.log(a)
+// type assertion
 
-let a : String;
-let numValue: number;
-let check : boolean | number;
+const btn1 = document.getElementById("btn")!;
+// const btn2 = document.getElementById("btn") as HTMLElement;
+// const btn3 = <HTMLElement>document.getElementById("btn");
 
-const func = (n:number,m:number) =>{
-    return n * m;
-}
+// const img = <HTMLImageElement>document.getElementById("myimg");
+const img = document.querySelector("img")!;
 
-console.log(func(34, 32))
 
-check = 56;
-check = false;
 
-console.log(check)
+
+
 
 
 
