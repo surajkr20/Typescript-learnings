@@ -1,8 +1,12 @@
 
 type nameType = (name: string, height: number, weight: number) => number | string;
 
-class Player{
-    public readonly userId: string | undefined = String(Math.random()*100);
+interface GiveId{
+    getId: () => string;
+}
+
+class Player implements GiveId{
+    private readonly userId: string = String(Math.random()*1000);
     private height;
     public weight;
 
@@ -10,11 +14,12 @@ class Player{
         return this.height;
     }
 
-    constructor(height: number, weight: number, userId?: string){
+    constructor(height: number, weight: number){
         this.height = height;
         this.weight = weight;
-        this.userId = userId;
     }
+    
+    getId = () => this.userId;
 }
 
 class NewPlayer extends Player{
@@ -24,13 +29,9 @@ class NewPlayer extends Player{
         super(height, weight);
         this.name = name;
     }
-
-    GetMyId(){
-        this.userId;
-    }
 }
 
-const suraj = new Player(12.43, 6.5, "12st435");
+const suraj = new Player(12.43, 6.5);
 
 // console.log(suraj.weight)
 
@@ -38,7 +39,7 @@ const suraj = new Player(12.43, 6.5, "12st435");
 
 const abhinav = new NewPlayer(12, 23, "surajkr");
 
-console.log(abhinav.userId)
+console.log(abhinav.getId)
 
 
 
